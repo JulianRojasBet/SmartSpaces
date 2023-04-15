@@ -24,12 +24,12 @@ class PhotosViewSet(DeactivateModelMixin, viewsets.ModelViewSet):
     serializer_class = PhotosModelSerializer
 
     def get_queryset(self):
-        # Return a queryset for the tabs of a dashboard
+        # Return a queryset for the photos of a post
         post_pk = self.kwargs.get('post_pk', None)
         if post_pk:
             return (
                 Photos.objects.filter(active=True, post_id=post_pk)
             )
-        # If a dashboard_pk is not specified, return all active tabs
+        # If a post_pk is not specified, return all active photos
         else:
             return Photos.objects.filter(active=True)
