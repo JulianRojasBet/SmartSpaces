@@ -6,7 +6,7 @@ import prompts
 import json
 
 # Load your API key from an environment variable or secret management service
-openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def suggestions(request: Dict[str, Any]):
