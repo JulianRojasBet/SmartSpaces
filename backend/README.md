@@ -1,0 +1,11 @@
+# To deploy locally
+- DB config (config.settings.DATABASES)
+  - Create a postgres DB named: smartspaces
+  - Create a group named dev
+  - Create a user named dev
+- activate python virtual environment:
+  - py -m venv .venv
+  - source .venv/Scripts/activate
+- Install dependencies: pip install -r backend/requirements.txt
+- Run migrations: py manage.py migrate
+- Run the server: py manage.py runserver
