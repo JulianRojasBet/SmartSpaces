@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Secrets
+.env
+
+# Cache
+__pycache__/
+*.pyc
+
+# Tests
+*.coverage
+
+# Databases
+.mwb
+*.sqlite3
+databases/
+
+# Docker
+.dockerignore
+.tests.dockerfile
