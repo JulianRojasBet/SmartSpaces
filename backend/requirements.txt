@@ -1,0 +1,17 @@
+# Django
+Django
+
+# DRF
+django-filter
+drf-flex-fields
+drf-access-policy
+drf-nested-routers
+drf-writable-nested
+djangorestframework
+djangorestframework-simplejwt
+
+# Databases
+psycopg2-binary
+
+# AWS
+boto3
