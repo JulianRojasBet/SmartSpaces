@@ -2,7 +2,15 @@ import boto3
 import os
 
 def upload_to_s3(list_of_files):
-    s3 = boto3.client('s3', aws_access_key_id='TU_ACCESS_KEY_ID', aws_secret_access_key='TU_SECRET_ACCESS_KEY')
+
+    secret_key = os.getenv('AWS_SECRET_KEY', 'xxx')
+    access_key = os.getenv('AWS_ACCESS_KEY', 'xxx')
+
+    s3 = boto3.client(
+        's3',
+        aws_access_key_id=access_key,
+        aws_secret_access_key=secret_key
+    )
     nombre_bucket_s3 = 'nombre-de-tu-bucket-s3' # PONER EL BUCKET
     urls_images = []
     for file_path in list_of_files:

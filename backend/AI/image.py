@@ -77,7 +77,7 @@ def modify(url, suggestion):
     data = response.json()
     result_paths = []
     for i, image in enumerate(data["artifacts"]):
-        out_path = f"./out/{image_name}_{i}.png"
+        out_path = f"AI/out/{image_name}_{i}.png"
         with open(out_path, "wb") as f:
             f.write(base64.b64decode(image["base64"]))
         result_paths.append(out_path)
