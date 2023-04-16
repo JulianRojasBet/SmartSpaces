@@ -8,7 +8,7 @@ def upload_to_s3(list_of_files):
     for file_path in list_of_files:
         if file_path.endswith('.jpg') or file_path.endswith('.png'):
             s3_object_name = os.path.basename(file_path)
-            s3.upload_file(file_path, nombre_bucket_s3, nombre_objeto_s3)
+            s3.upload_file(file_path, nombre_bucket_s3, s3_object_name)
             url_publica = s3.generate_presigned_url('get_object', Params={'Bucket': nombre_bucket_s3, 'Key': nombre_objeto_s3}, ExpiresIn=3600)
             urls_images.append(url_publica)
 
