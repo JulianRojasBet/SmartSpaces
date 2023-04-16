@@ -21,6 +21,11 @@ class Posts(BaseModel):
         default=''
     )
 
+    reviews = ArrayField(
+        models.TextField(max_length=500),
+        null=True,
+    )
+
 
     class Meta:
         get_latest_by = 'created'
