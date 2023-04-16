@@ -1,3 +1,6 @@
+# Environment
+python-dotenv
+
 # Django
 Django
 
@@ -18,3 +21,4 @@ boto3
 
 # Openai
 openai
+replicate

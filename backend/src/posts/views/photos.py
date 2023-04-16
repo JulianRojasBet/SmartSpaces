@@ -17,6 +17,7 @@ from src.utils.mixins import DeactivateModelMixin
 
 # AI
 from AI.api import suggestions
+from AI.replicate import modify_image
 
 class PhotosViewSet(DeactivateModelMixin, viewsets.ModelViewSet):
 
@@ -53,6 +54,7 @@ class PhotosViewSet(DeactivateModelMixin, viewsets.ModelViewSet):
             return Response(actions, status=status.HTTP_200_OK)
 
         elif request.method == 'POST':
-            # TODO: transformar la imagen y obtener sugerencias
-            # data = request.data
-            return Response("Sugerencias generadas", status=status.HTTP_200_OK)
+            data = request.data
+            output = modify_image(data['photo_url'], data['action'])
+            breakpoint()
+            return Response(output, status=status.HTTP_200_OK)

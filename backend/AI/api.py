@@ -13,7 +13,6 @@ def suggestions(reviews: list[str]):
     prompt = prompts.create_suggestions_prompt(reviews)
     response = openai.Completion.create(model="text-davinci-003", prompt=prompt, temperature=0.2, max_tokens = 512)
     suggestion = json.loads(getattr(response["choices"][0],"text"))
-    print(suggestion)
     return suggestion
 
 def translate(request: Dict[str, Any]):
