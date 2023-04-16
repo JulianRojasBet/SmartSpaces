@@ -18,9 +18,9 @@ class SuggestionsSerializer(serializers.Serializer):
     photo_url = serializers.URLField(max_length=255, allow_blank=False)
     action = serializers.CharField(max_length=255, allow_blank=False)
     model_choices = [
-        ('stable_diffusion', 'Stable-diffusion')
+        ('stable_diffusion', 'Stable-diffusion'),
         ('dalle', 'Dall-e'),
-        ('replicate', 'Replicate'),
+        ('replicate', 'Replicate')
     ]
     AI_model = serializers.ChoiceField(choices=model_choices)
     x1_coordinate = serializers.IntegerField(required=False)
