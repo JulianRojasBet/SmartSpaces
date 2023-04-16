@@ -19,6 +19,12 @@ psycopg2-binary
 # AWS
 boto3
 
-# Openai
+# AI
 openai
 replicate
+
+# HTTP-Requests
+requests
+
+# Image processing
+Pillow
