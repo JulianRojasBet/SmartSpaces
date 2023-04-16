@@ -23,8 +23,9 @@ boto3
 openai
 replicate
 
+# Image processing
+opencv-python
+Pillow
+
 # HTTP-Requests
 requests
-
-# Image processing
-Pillow

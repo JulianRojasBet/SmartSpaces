@@ -13,8 +13,8 @@ type SelectProps = {
 
 export function Select({ initial, options, onSelect }: SelectProps) {
   return (
-    <select className="select select-bordered w-full my-4 mx-2">
-      <option disabled selected>
+    <select className="select select-bordered w-full my-4 mx-2" defaultValue="default">
+      <option value="default" disabled>
         {initial}
       </option>
       {options.map(({ value, label }) => (

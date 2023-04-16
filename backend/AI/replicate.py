@@ -1,4 +1,3 @@
-import os
 import replicate
 
 # Models
@@ -8,14 +7,12 @@ pixray_text2img = "pixray/text2image:5c347a4bfa1d4523a58ae614c2194e15f2ae682b57e
 instruct_pix2pix = "timothybrooks/instruct-pix2pix:30c1d0b916a6f8efce20493f5d61ee27491ab2a60437c13c588468b9810ec23f"
 
 
-def modify_image(url, prompt):
+def modify_image(image_url, prompt):
     output = replicate.run(
         instruct_pix2pix,
         input={
-            "image": url,
+            "image": image_url,
             "prompt": prompt,
-            "negative_prompt": "changes the essence of the image",
-            "image_guidance_scale": 3
         }
     )
     return output

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { AdviceForm } from "./components/AdviceForm";
+import { PlaceImage } from "@/app/components/types";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,9 +37,7 @@ export default function PostHome() {
         </div>
       </div>
       <div className="border-t border-primary w-full py-10">
-        <div className="">
-          <AdviceForm />
-        </div>
+        <AdviceForm improved={{} as PlaceImage} />
       </div>
     </main>
   );
