@@ -23,7 +23,7 @@ class SuggestionsSerializer(serializers.Serializer):
         ('replicate', 'Replicate')
     ]
     AI_model = serializers.ChoiceField(choices=model_choices)
-    x1_coordinate = serializers.IntegerField(required=False)
-    y1_coordinate = serializers.IntegerField(required=False)
-    x2_coordinate = serializers.IntegerField(required=False)
-    y2_coordinate = serializers.IntegerField(required=False)
+    # x1_coordinate = serializers.IntegerField(required=False)
+    # y1_coordinate = serializers.IntegerField(required=False)
+    # x2_coordinate = serializers.IntegerField(required=False)
+    # y2_coordinate = serializers.IntegerField(required=False)
